@@ -1,0 +1,55 @@
+.community-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 40px 20px 60px 20px;
+    width: 70%;
+    border-radius: 10px;
+    font-family: var(--main-font);
+    background-color: var(--nav-bg-color);
+
+
+    .input {
+        outline: none;
+        border: none;
+        height: 30px;
+        width: 90%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        text-indent: 10px;
+        color: white;
+        background-color: rgb(51, 48, 48);
+    }
+
+    textarea {
+        outline: none;
+        border: none;
+        text-indent: 10px;
+        padding-top: 5px;
+        margin-bottom: 10px;
+        min-height: 60px;
+        width: 90%;
+        border-radius: 10px;
+        color: white;
+        background-color: rgb(51, 48, 48);
+    }
+
+    .submit-btn {
+        position: absolute;
+        right: 40px;
+        bottom: -15px;
+        cursor: pointer;
+        border-radius: 50px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border: none;
+        height: 35px;
+        width: 80px;
+        color: white;
+        background-color: var(--green-color);
+    }
+}

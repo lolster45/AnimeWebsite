@@ -1,0 +1,43 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 60%;
+    background-color: black;
+
+    & > article {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 400px;
+        width: 400px;
+        background-color: var(--nav-bg-color);
+
+        button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 80%;
+            color: rgb(91, 89, 89);
+            outline: none;
+            border: none;
+            background-color: white;
+    
+            &:hover {
+                background-color: rgb(237, 235, 235);
+            }
+    
+            & > svg {
+                margin-right: 10px;
+                font-size: 23px;
+            }
+        }
+    }
+    
+}

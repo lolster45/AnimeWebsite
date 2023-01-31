@@ -1,0 +1,152 @@
+.subHome-page {
+    font-family: var(--main-font);
+    height: 100vh;
+    width: 60%;
+    background-color: black;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+      
+    /* Hide scrollbar for IE, Edge and Firefox */
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+
+
+    
+    & > h1 {
+        font-size: 25px;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 80%;
+        color: white;
+
+    }
+    .mobile-pic {
+        display: none;
+    }
+   
+    .image-gradient {
+        position: relative;
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+
+        .main-image {
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            height: auto;
+            width: 100%;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top, rgb(0, 0, 0), transparent);
+        }
+
+        .main-title {
+            position: absolute;
+            z-index: 3;
+            bottom: 80px;
+            left: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .more-info-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            height: 40px;
+            width: 100px;
+            position: absolute;
+            right: 40px;
+            bottom: 80px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            background-color: var(--green-color);
+        }
+    }
+
+    .rec-title {
+        font-size: 24px;
+        margin-top: 100px;
+    }
+
+
+    .slider {
+        height: fit-content;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 100px;
+
+
+        img {
+            height: auto;
+            //height: 200px;
+            width: 100%;
+            border-radius: 0px;
+        }
+        
+        .slick-slide {
+            padding-right: 10px; /* add a padding to the right of each slide */
+          }
+    
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    .subHome-page {
+        width: 100vw;
+
+        & > h1 {
+            width: 90%;
+        }
+
+        .mobile-pic {
+            display: flex;
+            justify-content: center;
+            
+            & > img {
+                width: 90%;
+            }
+        }
+    }
+    
+
+    .image-gradient   {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 800px) {
+        .slider {
+            button.slick-arrow.slick-prev {
+                display: none !important;
+            }
+
+            button.slick-arrow.slick-next {
+                display: none !important;
+            }
+        }
+
+  }

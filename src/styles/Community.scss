@@ -1,0 +1,97 @@
+.community-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 60%;
+    font-family: var(--main-font);
+    color: white;
+    background-color: black;
+    
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+      
+    /* Hide scrollbar for IE, Edge and Firefox */
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+
+    
+
+    .user-posts-container {
+        font-family: var(--main-font);
+        min-height: 300px;
+        height: auto;
+        width: 600px;
+
+        .user-post {
+            position: relative;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding-bottom: 50px;
+            background-color: var(--nav-bg-color);
+
+            & > div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                & > img {
+                    border-radius: 50%;
+                    width: 25px;
+                    margin-right: 10px;
+                }
+            }
+
+            & > h1 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            & > p {
+                color: rgb(197, 196, 196);
+                font-size: 13px;
+            }
+
+            .likes {
+                cursor: pointer;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                left: 5;
+                bottom: 8px;
+                color: white;
+                border: none;
+                background-color: var(--nav-bg-color);
+                
+                & > .no-like {
+                    color: white;
+                    font-size: 18px;
+                    margin-right: 3px;
+                }
+                & > .yes-like {
+                    fill: red;
+                    font-size: 18px;
+                    margin-right: 3px;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    .community-page {
+        width: 100%;
+
+        .user-posts-container {
+            width: 80%;
+            
+        }
+    }
+}

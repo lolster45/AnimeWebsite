@@ -1,0 +1,126 @@
+.home-nav {
+        //visibility: hidden;
+    position: fixed;
+    position: relative;
+    //width: 250px;
+    width: 17%;
+    height: 100vh;
+    font-family: var(--main-font);
+    background-color: var(--nav-bg-color);
+
+    & > h1 {
+        text-align: center;
+        font-size: 40px;
+        padding: 5px;
+        padding-top: 15px;
+        color: var(--text-color);
+    }
+    
+    nav {
+        margin-top: 30px;
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-color);
+
+
+        h2 {
+            padding-left: 30px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: var(--border-color);
+        }
+        ul {
+            font-size: 20px;
+            width: 100%;
+            
+            a { 
+                display: flex;
+                align-items: center;
+                padding-left: 30px;
+                font-size: 17px;
+                margin-bottom: 25px;
+
+                
+                color: var(--text-color);
+                text-decoration: none;
+                border-right: 4px solid var(--nav-bg-color);
+                transition: border-right 0.4s ease-in-out;
+
+                &.active { //active for right border
+                    border-right: 4px solid var(--green-color);
+                }
+               
+
+                .icon {
+                    font-size: 20px;
+                    margin-right: 10px;
+                    transition: color 0.4s ease-in-out;
+
+                    &.active {
+                        color: var(--green-color);
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .user-account {
+        position: absolute;
+        bottom: 20px;
+        right: 60px;
+        border: none;
+        width: fit-content;
+
+        .login-button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 40px;
+            width: 100px;
+            padding: 5px;
+            border: none;
+            color: var(--green-color);
+            background-color: transparent;
+
+            & > svg {
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        }
+
+
+        & > .userStatusBtn {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: 100px;
+            padding: 5px;
+            border: none;
+            color: var(--green-color);
+            background-color: transparent;
+
+            & > svg {
+                font-size: 30px;
+            }
+        }
+
+
+    }
+
+    // .profile-picture {
+    //     border-radius: 50%;
+    //     height: 40px;
+    //     width: 40px;
+    // }
+
+}
+
+@media screen and (max-width: 990px) {
+    .home-nav {
+        display: none;
+    }
+}

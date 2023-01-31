@@ -1,0 +1,119 @@
+.search-add-menu {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 23%;
+    color: white;
+    font-family: var(--main-font);
+    background-color: var(--nav-bg-color);
+
+    & > nav {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding: 10px;
+        height: 80px;
+        width: 100%;
+        margin-bottom: 20px;
+        background-color: var(--nav-bg-color);
+
+        & > svg {
+            font-size: 35px;
+        }
+
+        img {
+            margin-left: 20px;
+            margin-right: 40px;
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+    & > .input-side-form  {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        background-color: var(--nav-bg-color);
+
+        & > input {
+            outline: none;
+            border-radius: 50px;
+            width: 80%;
+            text-indent: 15px;
+            color: white;
+            border: 1px solid var(--border-color);
+            background-color: var(--nav-bg-color);
+
+            &::placeholder {
+                color: white;
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    .trending {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        width: 80%;
+        margin-top: 20px;
+        background-color: var(--nav-bg-color);
+
+        & > h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sideMenu-cards {
+            display: flex;
+            margin-bottom: 10px;
+            width: 100%;
+
+            .sideMenu-images {
+                height: 90px;
+                width: 80px;
+            }
+
+            .info {
+                padding: 8px;
+                width: 100%;
+
+                & > h2 {
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                }
+                & > span {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .more-btn {
+            height: 40px;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            background-color: var(--green-color);
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 990px) {
+    .search-add-menu {
+        display: none;
+    }
+}

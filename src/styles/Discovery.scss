@@ -1,0 +1,128 @@
+.discovery-page {
+    margin: 0 auto;
+    height: 100vh;
+    width: 60%;
+    color: white;
+    background-color: black;
+    font-family: var(--main-font);
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+      
+    /* Hide scrollbar for IE, Edge and Firefox */
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+
+    & > .discovery-nav {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-color);
+
+        & > a {
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 20px;
+            color: white;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--green-color);
+            }
+            
+        }
+    }
+}
+
+.mobile-nav { //Only will appear when it reaches certain window dimensions...
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: end;
+    height: 40px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 45px;
+    color: white;
+
+    //background-color: red;
+
+    .hamburger {
+        cursor: pointer;
+        position: relative;
+        z-index: 6;
+    }
+
+    .mobile-bg {
+        position: absolute;
+        z-index: 5;
+        width: 0;
+        height: 0;
+        margin: 30px 0 20px 20px;
+        background: radial-gradient(circle, #039750, #039750);
+        border-radius: 50%;
+        transition: 0.3s ease;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 160px;
+            bottom: 60px;
+            list-style: none;
+            transition: color 0.3s ease-in;
+
+            & > a {
+                text-decoration: none;
+                color: transparent;
+                text-align: end;
+                cursor: pointer;
+                font-size: 20px;
+                margin-top: 25px;
+            }
+        }
+
+        &.active {
+            display: block;
+            width: 520px;
+            height: 520px;
+            transform: translate(45%, 5%);
+
+            & > ul > a {
+                color: white;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 990px) {
+    .discovery-page {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 455px) {
+    .discovery-page > .discovery-nav > a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 345px) {
+    .discovery-page > .discovery-nav > a {
+        font-size: 10px;
+    }
+}

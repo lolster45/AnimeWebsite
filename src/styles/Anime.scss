@@ -1,0 +1,162 @@
+.anime-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+
+    .anime-nav-filter {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        select {
+            cursor: pointer;
+            outline: none;
+            background-color: black;
+            color: var(--green-color);
+            border-color: var(--green-color);
+        }
+    }
+
+    & > h2 {
+        text-align: start;
+        padding: 10px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    .anime-grid {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        margin-top: 20px;
+        column-gap: 20px;
+        height: auto;
+        width: 100%;
+
+        .card {
+            width: 100%;
+            margin-bottom: 30px;
+
+            &.subHome {
+                display: flex;
+            }
+
+            .card-image {
+                height: auto;
+                width: 100%;
+                border-radius: 10px;
+            }
+            .card-title {   
+                font-size: 12px;
+                text-align: center;
+                height: auto;
+                width: auto;
+            }
+           
+        }
+
+       
+    }
+
+    .page-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+        padding-bottom: 50px;
+
+        &.more {
+            justify-content: space-between;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px;
+            color: white;
+            background-color: var(--green-color);  
+        }
+    }
+}
+
+
+//Styles for the individual Cards...
+.back-arrow {
+    font-size: 30px;
+    color: var(--green-color);
+}
+
+
+.more-info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //background-color: red;
+
+    img {
+        height: auto;
+        width: 200px;
+        border-radius: 10px;
+    }
+    h2 { //title of clicked on series...
+        margin-top: 10px;
+    }
+
+    .tags {
+        color: var(--green-color);
+        margin-top: 10px;
+        
+        span {
+            font-size: 8px;
+            padding: 5px;
+            border-radius: 10px;
+            margin-right: 7px;
+            background-color: rgb(44, 41, 41);
+            color: var(--green-color);
+        }
+        
+    }
+
+
+    h3{ //synopsis title...
+        align-self: flex-start;
+        width: 100%;
+        padding-bottom: 20px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+        //background-color: wheat;
+    }
+
+    p { //actual synopsis...
+        font-size: 15px;
+        color: var(--sub-text-color);
+        line-height: 25px;
+    }
+
+
+    
+    
+}
+
+.comment-reviews {
+    margin-top: 90px;
+    & > h2 {
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid var(--border-color);
+    }
+}
+
+
+
+@media screen and (max-width: 990px) {
+    .anime-page {
+
+    }
+}
